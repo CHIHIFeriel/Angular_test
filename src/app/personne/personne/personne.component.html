@@ -1,0 +1,22 @@
+
+<table class="table-style">
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Date of Birth</th>
+    <th>age</th>
+    <th>post</th>
+  </tr>
+  <tr *ngFor="let per of personne">
+    <td>{{ per.nom }}</td>
+    <td>{{ per.prenom }}</td>
+    <td>{{ per.naissance| date : "YYYY-MM-dd" }}</td>
+    <td>{{ per.age }}</td>
+    <td>
+      <ul>
+        <li *ngFor="let emploi of per.emplois">{{ emploi.post }}</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
